@@ -1,0 +1,1586 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=PT+Sans|Fjalla+One);
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*Compass imports*/
+/* line 17, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline; }
+
+/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+    line-height: 1; }
+
+/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+    list-style: none; }
+
+/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+
+/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle; }
+
+/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+    quotes: none; }
+/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+    border: none; }
+
+/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+    display: block; }
+
+/*project imports*/
+/* line 1, ../scss/globals/_globals.scss */
+h1, h2, h3, h4, h5 {
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: normal;
+    line-height: normal; }
+
+/* line 6, ../scss/globals/_globals.scss */
+h1 {
+    font-size: 35px;
+    color: #fff; }
+
+/* line 10, ../scss/globals/_globals.scss */
+h2 {
+    font-size: 32px;
+    color: #fff; }
+
+/* line 14, ../scss/globals/_globals.scss */
+h3 {
+    font-size: 24px;
+    color: #fff; }
+
+/* line 18, ../scss/globals/_globals.scss */
+h4 {
+    font-size: 22px;
+    color: #fff; }
+
+/* line 23, ../scss/globals/_globals.scss */
+.hidden {
+    display: none; }
+
+/* Isotope styles */
+/* line 29, ../scss/globals/_globals.scss */
+.isotope-item {
+    z-index: 2; }
+
+/* line 33, ../scss/globals/_globals.scss */
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1; }
+
+/* line 38, ../scss/globals/_globals.scss */
+.isotope {
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    -o-transition-property: height, width;
+    transition-property: height, width; }
+/* line 42, ../scss/globals/_globals.scss */
+.isotope .isotope-item {
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    -o-transition-property: -o-transform, opacity;
+    transition-property: transform, opacity; }
+
+/**** disabling Isotope CSS3 transitions ****/
+/* line 51, ../scss/globals/_globals.scss */
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s; }
+
+@font-face {
+    font-family: 'fontello';
+    src: url("../fonts/fontellof018.eot?68861189");
+    src: url("../fonts/fontellof018.eot?68861189#iefix") format("embedded-opentype"), url("../fonts/fontellof018.woff?68861189") format("woff"), url("../fonts/fontellof018.ttf?68861189") format("truetype"), url("../fonts/fontellof018.svg?68861189#mail") format("svg");
+    font-weight: normal;
+    font-style: normal; }
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'mail';
+    src: url('../font/mail.svg?68861189#mail') format('svg');
+  }
+}
+*/
+/* line 22, ../scss/globals/_typography.scss */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+/* line 53, ../scss/globals/_typography.scss */
+.icon-search:before {
+    content: '\e818'; }
+
+/* '' */
+/* line 54, ../scss/globals/_typography.scss */
+.icon-qrcode:before {
+    content: '\e80d'; }
+
+/* '' */
+/* line 55, ../scss/globals/_typography.scss */
+.icon-user:before {
+    content: '\e80e'; }
+
+/* '' */
+/* line 56, ../scss/globals/_typography.scss */
+.icon-picture:before {
+    content: '\e80b'; }
+
+/* '' */
+/* line 57, ../scss/globals/_typography.scss */
+.icon-link:before {
+    content: '\e802'; }
+
+/* '' */
+/* line 58, ../scss/globals/_typography.scss */
+.icon-download:before {
+    content: '\e814'; }
+
+/* '' */
+/* line 59, ../scss/globals/_typography.scss */
+.icon-print:before {
+    content: '\e813'; }
+
+/* '' */
+/* line 60, ../scss/globals/_typography.scss */
+.icon-chat:before {
+    content: '\e80a'; }
+
+/* '' */
+/* line 61, ../scss/globals/_typography.scss */
+.icon-vcard:before {
+    content: '\e809'; }
+
+/* '' */
+/* line 62, ../scss/globals/_typography.scss */
+.icon-location:before {
+    content: '\e805'; }
+
+/* '' */
+/* line 63, ../scss/globals/_typography.scss */
+.icon-newspaper:before {
+    content: '\e811'; }
+
+/* '' */
+/* line 64, ../scss/globals/_typography.scss */
+.icon-phone:before {
+    content: '\e810'; }
+
+/* '' */
+/* line 65, ../scss/globals/_typography.scss */
+.icon-mail:before {
+    content: '\e808'; }
+
+/* '' */
+/* line 66, ../scss/globals/_typography.scss */
+.icon-calendar:before {
+    content: '\e816'; }
+
+/* '' */
+/* line 67, ../scss/globals/_typography.scss */
+.icon-window:before {
+    content: '\e817'; }
+
+/* '' */
+/* line 68, ../scss/globals/_typography.scss */
+.icon-left-open:before {
+    content: '\e807'; }
+
+/* '' */
+/* line 69, ../scss/globals/_typography.scss */
+.icon-right-open:before {
+    content: '\e806'; }
+
+/* '' */
+/* line 70, ../scss/globals/_typography.scss */
+.icon-mobile:before {
+    content: '\e800'; }
+
+/* '' */
+/* line 71, ../scss/globals/_typography.scss */
+.icon-globe:before {
+    content: '\e815'; }
+
+/* '' */
+/* line 72, ../scss/globals/_typography.scss */
+.icon-twitter:before {
+    content: '\e804'; }
+
+/* '' */
+/* line 73, ../scss/globals/_typography.scss */
+.icon-facebook:before {
+    content: '\e803'; }
+
+/* '' */
+/* line 74, ../scss/globals/_typography.scss */
+.icon-gplus:before {
+    content: '\e801'; }
+
+/* '' */
+/* line 75, ../scss/globals/_typography.scss */
+.icon-linkedin:before {
+    content: '\e80c'; }
+
+/* '' */
+/* line 76, ../scss/globals/_typography.scss */
+.icon-skype:before {
+    content: '\e80f'; }
+
+/* '' */
+/* line 77, ../scss/globals/_typography.scss */
+.icon-cog:before {
+    content: '\e812'; }
+
+/* '' */
+/*Colors*/
+/* Hexagon mixin*/
+/* line 162, ../scss/base/_mixins.scss */
+.hexagon {
+    width: 204px;
+    height: 236px;
+    overflow: hidden;
+    visibility: hidden;
+    float: left;
+    display: block;
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg); }
+/* line 171, ../scss/base/_mixins.scss */
+.hexagon div.hexagon-in1 {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg); }
+/* line 178, ../scss/base/_mixins.scss */
+.hexagon div.hexagon-in2 {
+    color: #fff;
+    overflow: hidden;
+    visibility: visible;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg); }
+/* line 188, ../scss/base/_mixins.scss */
+.hexagon .inner {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    visibility: hidden;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg); }
+/* line 196, ../scss/base/_mixins.scss */
+.hexagon a {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    visibility: visible;
+    display: block;
+    padding-top: 84px;
+    text-decoration: none;
+    -webkit-transition: padding 0.2s ease;
+    -moz-transition: padding 0.2s ease;
+    -o-transition: padding 0.2s ease;
+    transition: padding 0.2s ease; }
+/* line 208, ../scss/base/_mixins.scss */
+.hexagon a i {
+    font-size: 70px;
+    display: block; }
+
+/* line 4, ../scss/base/_base.scss */
+body {
+    background: url('../images/bgcb86.jpg?1388097775') 50% 50% fixed;
+    color: #c7c7c7;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+/* line 13, ../scss/base/_base.scss */
+#page-wrapper {
+    width: 822px;
+    margin: 0 auto; }
+/* line 17, ../scss/base/_base.scss */
+#page-wrapper #header {
+    height: 408px;
+    position: relative;
+    padding: 100px 0 0 0;
+    *zoom: 1; }
+/* line 38, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#page-wrapper #header:after {
+    content: "";
+    display: table;
+    clear: both; }
+/* line 23, ../scss/base/_base.scss */
+#page-wrapper #header .header-menu {
+    position: absolute; }
+/* line 27, ../scss/base/_base.scss */
+#page-wrapper #header .header-menu a:hover, #page-wrapper #header .header-menu a.active {
+    padding-top: 60px; }
+/* line 30, ../scss/base/_base.scss */
+#page-wrapper #header .header-menu a:hover span, #page-wrapper #header .header-menu a.active span {
+    margin: 15px; }
+/* line 36, ../scss/base/_base.scss */
+#page-wrapper #header .header-menu span {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 35px;
+    display: block;
+    margin-top: 75px;
+    -webkit-transition: margin 0.2s ease;
+    -moz-transition: margin 0.2s ease;
+    -o-transition: margin 0.2s ease;
+    transition: margin 0.2s ease; }
+/* line 45, ../scss/base/_base.scss */
+#page-wrapper #header .header-menu .userpic a:hover {
+    padding-top: 0; }
+/* line 52, ../scss/base/_base.scss */
+#page-wrapper #main {
+    background: #333333;
+    margin-top: -224px;
+    padding: 37px 0 46px;
+    min-height: 408px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    *zoom: 1; }
+/* line 38, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#page-wrapper #main:after {
+    content: "";
+    display: table;
+    clear: both; }
+/* line 60, ../scss/base/_base.scss */
+#page-wrapper #main .page-title {
+    text-align: center;
+    padding-top: 6px;
+    z-index: 10; }
+/* line 65, ../scss/base/_base.scss */
+#page-wrapper #main .page-title h1 {
+    display: inline-block;
+    position: relative; }
+/* line 71, ../scss/base/_base.scss */
+#page-wrapper #main .block-title {
+    padding-bottom: 30px; }
+/* line 75, ../scss/base/_base.scss */
+#page-wrapper #main .content-wrapper {
+    *zoom: 1; }
+/* line 38, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#page-wrapper #main .content-wrapper:after {
+    content: "";
+    display: table;
+    clear: both; }
+/* line 78, ../scss/base/_base.scss */
+#page-wrapper #main .content-wrapper p {
+    margin-bottom: 20px; }
+/* line 82, ../scss/base/_base.scss */
+#page-wrapper #main .content-wrapper ul {
+    margin-bottom: 20px; }
+/* line 85, ../scss/base/_base.scss */
+#page-wrapper #main .content-wrapper ul li {
+    background: url('../images/bg-li3b44.png?1391223173') no-repeat 0 9px;
+    padding-left: 18px; }
+/* line 93, ../scss/base/_base.scss */
+#page-wrapper #footer {
+    margin-top: -220px;
+    *zoom: 1; }
+/* line 38, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#page-wrapper #footer:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* Menu hexagon */
+/* line 101, ../scss/base/_base.scss */
+.portfolio, .contact {
+    margin: 168px 0 0 -43px; }
+/* line 104, ../scss/base/_base.scss */
+.portfolio .hexagon-in2, .portfolio a, .contact .hexagon-in2, .contact a {
+    background: #ff9000; }
+
+/* line 109, ../scss/base/_base.scss */
+.contact {
+    margin: 168px -43px 0 -28px; }
+
+/* line 113, ../scss/base/_base.scss */
+.profile, .resume {
+    margin: 66px 0 0 -28px; }
+/* line 116, ../scss/base/_base.scss */
+.profile .hexagon-in2, .profile a, .resume .hexagon-in2, .resume a {
+    background: #db5800; }
+
+/* line 121, ../scss/base/_base.scss */
+.userpic {
+    margin: -36px 0 0 -28px; }
+/* line 124, ../scss/base/_base.scss */
+.userpic a {
+    padding: 0 !important; }
+/* line 127, ../scss/base/_base.scss */
+.userpic a img {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    margin: 16px 0 0 -16px; }
+
+/* Footer hexagon */
+/* line 135, ../scss/base/_base.scss */
+.twitter, .facebook {
+    margin: 0 0 0 -43px; }
+/* line 138, ../scss/base/_base.scss */
+.twitter .hexagon-in2, .twitter a {
+    background: #4A66A0;
+    -webkit-transition: background 0.3s ease;
+    -webkit-transition-delay: !important;
+    -moz-transition: background 0.3s ease !important;
+    -o-transition: background 0.3s ease !important;
+    transition: background 0.3s ease !important; }
+/* line 142, ../scss/base/_base.scss */
+.facebook .hexagon-in2, .facebook a {
+    background: #4A66A0;
+    -webkit-transition: background 0.3s ease;
+    -webkit-transition-delay: !important;
+    -moz-transition: background 0.3s ease !important;
+    -o-transition: background 0.3s ease !important;
+    transition: background 0.3s ease !important; }
+.twitter .hexagon-in2:hover, .twitter a:hover, .facebook .hexagon-in2:hover, .facebook a:hover {
+    background: #ffda14;
+    -webkit-transition: background 0s !important;
+    -moz-transition: background 0s !important;
+    -o-transition: background 0s !important;
+    transition: background 0s !important; }
+
+/* line 149, ../scss/base/_base.scss */
+.facebook {
+    margin: 0 -43px 0 -28px; }
+
+/* line 153, ../scss/base/_base.scss */
+.linkedin, .gplus {
+    margin: 102px 0 0 -28px; }
+/* line 156, ../scss/base/_base.scss */
+.linkedin .hexagon-in2, .linkedin a {
+    background: #0274b3;
+    -webkit-transition: background 0.3s ease;
+    -webkit-transition-delay: !important;
+    -moz-transition: background 0.3s ease !important;
+    -o-transition: background 0.3s ease !important;
+    transition: background 0.3s ease !important; }
+.gplus .hexagon-in2, .gplus a {
+    background: #d82511;
+    -webkit-transition: background 0.3s ease;
+    -webkit-transition-delay: !important;
+    -moz-transition: background 0.3s ease !important;
+    -o-transition: background 0.3s ease !important;
+    transition: background 0.3s ease !important; }
+/* line 160, ../scss/base/_base.scss */
+.linkedin .hexagon-in2:hover, .linkedin a:hover, .gplus .hexagon-in2:hover, .gplus a:hover {
+    background: #a2b51a;
+    -webkit-transition: background 0s !important;
+    -moz-transition: background 0s !important;
+    -o-transition: background 0s !important;
+    transition: background 0s !important; }
+
+/* line 167, ../scss/base/_base.scss */
+.copyright {
+    float: left;
+    width: 204px;
+    height: 200px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 220px -14px 0;
+    padding: 38px 23px 0 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+/* line 1, ../scss/base/_forms.scss */
+label {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'PT Sans', sans-serif; }
+
+/* line 7, ../scss/base/_forms.scss */
+input[type=text], input[type=email], textarea {
+    background: #292929;
+    border: 1px solid #615f55;
+    color: #c7c7c7;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+/* Hexagon mixin*/
+/* line 162, ../scss/base/_mixins.scss */
+.hexagon {
+    width: 204px;
+    height: 236px;
+    overflow: hidden;
+    visibility: hidden;
+    float: left;
+    display: block;
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg); }
+/* line 171, ../scss/base/_mixins.scss */
+.hexagon div.hexagon-in1 {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg); }
+/* line 178, ../scss/base/_mixins.scss */
+.hexagon div.hexagon-in2 {
+    color: #fff;
+    overflow: hidden;
+    visibility: visible;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg); }
+/* line 188, ../scss/base/_mixins.scss */
+.hexagon .inner {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    visibility: hidden;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg); }
+/* line 196, ../scss/base/_mixins.scss */
+.hexagon a {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    visibility: visible;
+    display: block;
+    padding-top: 84px;
+    text-decoration: none;
+    -webkit-transition: padding 0.2s ease;
+    -moz-transition: padding 0.2s ease;
+    -o-transition: padding 0.2s ease;
+    transition: padding 0.2s ease; }
+/* line 208, ../scss/base/_mixins.scss */
+.hexagon a i {
+    font-size: 70px;
+    display: block; }
+
+/*Colors*/
+/**/
+/* line 3, ../scss/pages/_contact.scss */
+#contact-page .contact-address {
+    color: #fff;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 34px 0 18px;
+    text-align: center;
+    z-index: 500; }
+/* line 12, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper {
+    padding: 0 32px 200px; }
+/* line 15, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .map {
+    margin: 0 -32px 0 -32px;
+    position: relative;
+    overflow: hidden; }
+/* line 20, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .map #map_canvas {
+    height: 409px;
+    width: 100%; }
+/* line 25, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .map .qr-code {
+    background: rgba(219, 88, 0, 0.78);
+    padding: 23px 20px 39px;
+    position: absolute;
+    right: -200px;
+    top: 57px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: right 0.7s ease;
+    -moz-transition: right 0.7s ease;
+    -o-transition: right 0.7s ease;
+    transition: right 0.7s ease; }
+/* line 35, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .map .qr-code:before {
+    border-top: 148px solid transparent;
+    border-bottom: 148px solid transparent;
+    border-right: 86px solid rgba(219, 88, 0, 0.78);
+    left: -86px;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0; }
+/* line 48, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .map .qr-code:after {
+    content: "\e80d";
+    font-family: 'fontello';
+    font-weight: normal;
+    display: inline-block;
+    position: absolute;
+    color: #fff;
+    font-size: 34px;
+    left: -49px;
+    top: 135px; }
+/* line 60, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .map .qr-code.active {
+    right: 0; }
+/* line 64, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .map .qr-code h3 {
+    font-size: 28px;
+    padding-bottom: 17px; }
+/* line 71, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details {
+    overflow: hidden;
+    padding-top: 40px; }
+/* line 75, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .left-col {
+    float: left;
+    width: 494px; }
+/* line 79, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .left-col .form-item {
+    float: left;
+    padding-bottom: 10px; }
+/* line 83, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .left-col .form-item:first-child {
+    margin-right: 20px; }
+/* line 88, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .left-col label {
+    display: block;
+    line-height: 30px; }
+/* line 94, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .left-col input[type=text],
+#contact-page .cotent-wrapper .contact-details .left-col input[type=email] {
+    padding: 9px 10px 10px;
+    width: 237px; }
+/* line 98, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .left-col input[type=text]::-webkit-input-placeholder,
+#contact-page .cotent-wrapper .contact-details .left-col input[type=email]::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #615f55; }
+/* line 101, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .left-col input[type=text]:-moz-placeholder,
+#contact-page .cotent-wrapper .contact-details .left-col input[type=email]:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #615f55; }
+/* line 104, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .left-col input[type=text]::-moz-placeholder,
+#contact-page .cotent-wrapper .contact-details .left-col input[type=email]::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #615f55; }
+/* line 107, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .left-col input[type=text]:-ms-input-placeholder,
+#contact-page .cotent-wrapper .contact-details .left-col input[type=email]:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #615f55; }
+/* line 111, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .left-col input[type=text]:focus,
+#contact-page .cotent-wrapper .contact-details .left-col input[type=email]:focus {
+    outline: none; }
+/* line 116, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .left-col textarea {
+    padding: 10px;
+    resize: none;
+    height: 100px;
+    width: 100%; }
+/* line 123, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .left-col .form-submit {
+    background: url('../images/bg-submitb86e.png?1393544910') no-repeat 0 0;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    padding: 6px 18px;
+    margin-top: 15px;
+    width: 123px;
+    height: 38px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+/* line 135, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .left-col .form-submit:hover {
+    background: url('../images/bg-submitb86e.png?1393544910') no-repeat 0 -38px; }
+/* line 138, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .left-col .form-submit:active {
+    background: url('../images/bg-submitb86e.png?1393544910') no-repeat 0 -76px;
+    padding: 7px 17px 5px 19px;
+    color: #ffdcc2;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.7); }
+/* line 146, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .right-col {
+    float: right;
+    width: 224px; }
+/* line 150, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .right-col h2 {
+    font-size: 24px;
+    padding-bottom: 18px; }
+/* line 155, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .right-col p {
+    font-size: 18px;
+    padding-bottom: 12px; }
+/* line 159, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .right-col p:before {
+    color: #fff;
+    font-size: 16px;
+    padding-right: 10px; }
+/* line 165, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .right-col p a {
+    color: #c7c7c7;
+    text-decoration: none; }
+/* line 169, ../scss/pages/_contact.scss */
+#contact-page .cotent-wrapper .contact-details .right-col p a:hover {
+    text-decoration: underline; }
+
+/* line 3, ../scss/pages/_homepage.scss */
+.index-index #main h1 {
+    font-size: 48px;
+    margin: 0 auto;
+    padding-top: 26px;
+    position: relative;
+    text-align: center;
+    width: 580px;
+    z-index: 550; }
+/* line 13, ../scss/pages/_homepage.scss */
+.index-index #main p {
+    width: 530px;
+    font-size: 24px;
+    margin: 0 auto;
+    padding-top: 5px;
+    position: relative;
+    line-height: 31px;
+    text-align: center; }
+/* line 23, ../scss/pages/_homepage.scss */
+.index-index #main .job-title {
+    font-size: 24px;
+    text-align: center;
+    width: 150px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 550;
+    line-height: 27px; }
+/* line 33, ../scss/pages/_homepage.scss */
+.index-index #main .phone {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 30px;
+    color: #fff;
+    padding-top: 16px;
+    text-align: center; }
+/* line 40, ../scss/pages/_homepage.scss */
+.index-index #main .phone i {
+    background: #fff;
+    color: #333333;
+    display: block;
+    margin: 22px auto 0;
+    padding-top: 6px;
+    width: 49px;
+    height: 49px;
+    font-size: 35px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%; }
+
+/* line 2, ../scss/pages/_portfolio.scss */
+#portfolio-page #container {
+    min-height: 182px; }
+/* line 5, ../scss/pages/_portfolio.scss */
+#portfolio-page #container .element {
+    overflow: hidden;
+    position: absolute;
+    text-align: center; }
+/* line 10, ../scss/pages/_portfolio.scss */
+#portfolio-page #container .element .mask {
+    width: 100%;
+    height: 182px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(219, 127, 8, 0.7);
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+/* line 22, ../scss/pages/_portfolio.scss */
+#portfolio-page #container .element:hover .mask {
+    opacity: 1; }
+/* line 26, ../scss/pages/_portfolio.scss */
+#portfolio-page #container .element img {
+    display: block;
+    position: relative;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+/* line 31, ../scss/pages/_portfolio.scss */
+#portfolio-page #container .element:hover img {
+    transform: scale(1.1); }
+/* line 35, ../scss/pages/_portfolio.scss */
+#portfolio-page #container .element h2 {
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0;
+    opacity: 0;
+    transform: translateY(-100px);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+/* line 47, ../scss/pages/_portfolio.scss */
+#portfolio-page #container .element h2 a {
+    color: #fff;
+    text-decoration: none; }
+/* line 52, ../scss/pages/_portfolio.scss */
+#portfolio-page #container .element:hover h2 {
+    opacity: 1;
+    transform: translateY(0px); }
+/* line 57, ../scss/pages/_portfolio.scss */
+#portfolio-page #container .element p {
+    font-size: 13px;
+    line-height: 16px;
+    cursor: text;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 5px;
+    opacity: 0;
+    transform: translateY(100px);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+/* line 68, ../scss/pages/_portfolio.scss */
+#portfolio-page #container .element:hover p {
+    opacity: 1;
+    transition-delay: 0.1s;
+    transform: translateY(0px); }
+/* line 74, ../scss/pages/_portfolio.scss */
+#portfolio-page #container .element a.zoom {
+    display: inline-block;
+    width: 40px;
+    height: 23px;
+    position: relative;
+    background-color: black;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    color: #fff; }
+/* line 38, ../scss/base/_mixins.scss */
+#portfolio-page #container .element a.zoom:before, #portfolio-page #container .element a.zoom:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent; }
+/* line 60, ../scss/base/_mixins.scss */
+#portfolio-page #container .element a.zoom:before {
+    border-bottom: 12px solid black;
+    top: -12px; }
+/* line 65, ../scss/base/_mixins.scss */
+#portfolio-page #container .element a.zoom:after {
+    bottom: -12px;
+    border-top: 12px solid black; }
+/* line 78, ../scss/pages/_portfolio.scss */
+#portfolio-page #container .element a.zoom i {
+    font-size: 20px; }
+/* line 82, ../scss/pages/_portfolio.scss */
+#portfolio-page #container .element a.zoom img {
+    display: none; }
+/* line 89, ../scss/pages/_portfolio.scss */
+#portfolio-page #filters {
+    width: 500px;
+    margin: 0 auto;
+    padding: 48px 0 39px;
+    position: relative;
+    text-align: center;
+    *zoom: 1; }
+/* line 38, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#portfolio-page #filters:after {
+    content: "";
+    display: table;
+    clear: both; }
+/* line 97, ../scss/pages/_portfolio.scss */
+#portfolio-page #filters li {
+    display: inline-block;
+    padding: 0 10px; }
+/* line 101, ../scss/pages/_portfolio.scss */
+#portfolio-page #filters li a {
+    color: #fff;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 24px;
+    padding: 0 10px 5px;
+    text-decoration: none; }
+/* line 108, ../scss/pages/_portfolio.scss */
+#portfolio-page #filters li a:hover, #portfolio-page #filters li a.active {
+    border-bottom: 1px solid #ff9000; }
+/* line 115, ../scss/pages/_portfolio.scss */
+#portfolio-page #filters-page {
+    width: 500px;
+    margin: 0 auto 46px;
+    padding: 41px 0 43px;
+    position: relative;
+    text-align: center;
+    *zoom: 1; }
+/* line 38, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#portfolio-page #filters-page:after {
+    content: "";
+    display: table;
+    clear: both; }
+/* line 123, ../scss/pages/_portfolio.scss */
+#portfolio-page #filters-page li {
+    display: inline-block;
+    padding: 0 4px; }
+/* line 127, ../scss/pages/_portfolio.scss */
+#portfolio-page #filters-page li a {
+    border: 2px solid #464646;
+    color: #fff;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
+    padding: 5px 13px;
+    text-decoration: none;
+    -webkit-transition: background 0.2s ease;
+    -moz-transition: background 0.2s ease;
+    -o-transition: background 0.2s ease;
+    transition: background 0.2s ease; }
+/* line 136, ../scss/pages/_portfolio.scss */
+#portfolio-page #filters-page li a:hover, #portfolio-page #filters-page li a.active {
+    background: #464646;
+    -webkit-transition: background 0s;
+    -moz-transition: background 0s;
+    -o-transition: background 0s;
+    transition: background 0s; }
+
+/**/
+/* line 3, ../scss/pages/_profile.scss */
+#profile-page em.subtitle {
+    text-align: center;
+    display: block;
+    font-style: italic;
+    font-size: 24px;
+    padding: 65px 0 45px; }
+/* line 11, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper {
+    padding: 0 32px 150px; }
+/* line 15, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .post {
+    padding: 30px 0 40px;
+    *zoom: 1; }
+/* line 38, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#profile-page .content-wrapper .post:after {
+    content: "";
+    display: table;
+    clear: both; }
+/* line 20, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .general-skills {
+    background: #414141;
+    margin: 0 -32px;
+    padding: 30px 32px 40px 32px; }
+/* line 25, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .general-skills .skill-item {
+    background: none;
+    float: left;
+    padding: 30px 10px 0;
+    width: 252px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+/* line 33, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .general-skills .skill-item a {
+    display: inline-block;
+    width: 85px;
+    height: 49px;
+    position: relative;
+    background-color: #049bc7;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #fff;
+    font-size: 40px;
+    padding: 5px 0 0 0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+/* line 38, ../scss/base/_mixins.scss */
+#profile-page .content-wrapper .general-skills .skill-item a:before, #profile-page .content-wrapper .general-skills .skill-item a:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    border-left: 43px solid transparent;
+    border-right: 43px solid transparent; }
+/* line 60, ../scss/base/_mixins.scss */
+#profile-page .content-wrapper .general-skills .skill-item a:before {
+    border-bottom: 25px solid #049bc7;
+    top: -25px; }
+/* line 65, ../scss/base/_mixins.scss */
+#profile-page .content-wrapper .general-skills .skill-item a:after {
+    bottom: -25px;
+    border-top: 25px solid #049bc7; }
+/* line 46, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .general-skills .skill-item h3 {
+    padding: 15px 0; }
+/* line 52, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .technical-skills {
+    overflow: hidden;
+    padding: 40px 0; }
+/* line 56, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .technical-skills li {
+    margin-bottom: 1px; }
+/* line 60, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .technical-skills .graphic-skills {
+    float: left;
+    width: 341px;
+    margin-right: 70px; }
+/* line 65, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .technical-skills .other-skills {
+    float: left;
+    width: 341px; }
+/* line 71, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .technical-skills .progressbar {
+    background: none !important;
+    padding-left: 0 !important;
+    display: block;
+    height: 35px;
+    width: 100%; }
+/* line 78, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .technical-skills .progress {
+    display: block;
+    height: 35px;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    width: 0;
+    border-radius: 3px; }
+/* line 87, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .technical-skills .progress.dark-orange {
+    background: #db5800; }
+/* line 88, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .technical-skills .progress.orange {
+    background: #ff9000; }
+/* line 89, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .technical-skills .progress.yellow {
+    background: #f0c600; }
+/* line 90, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .technical-skills .progress.green {
+    background: #8ea106; }
+/* line 91, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .technical-skills .progress.turquoise {
+    background: #09bf7d; }
+/* line 92, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .technical-skills .progress.blue {
+    background: #049bc7; }
+/* line 93, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .technical-skills .progress.dark-blue {
+    background: #0771ca; }
+/* line 94, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .technical-skills .progress.purple {
+    background: #9054bf; }
+/* line 96, ../scss/pages/_profile.scss */
+#profile-page .content-wrapper .technical-skills .value {
+    color: #fff;
+    font-family: 'Fjalla One', sans-serif;
+    display: none;
+    font-size: 17px;
+    padding-left: 13px;
+    line-height: 35px;
+    position: relative; }
+
+/**/
+/* line 2, ../scss/pages/_resume.scss */
+#resume-page {
+    /* Layout switcher */ }
+/* line 3, ../scss/pages/_resume.scss */
+#resume-page .content-wrapper {
+    padding: 13px 32px 100px; }
+/* line 7, ../scss/pages/_resume.scss */
+#resume-page h2 {
+    margin-bottom: 22px; }
+/* line 12, ../scss/pages/_resume.scss */
+#resume-page .employment,
+#resume-page .education {
+    background: url('../images/bg-employmenta7af.gif?1391125463') repeat-y 124px 0;
+    padding: 10px 0 28px 160px; }
+/* line 17, ../scss/pages/_resume.scss */
+#resume-page .employment .emp-period,
+#resume-page .employment .edu-period,
+#resume-page .education .emp-period,
+#resume-page .education .edu-period {
+    font-family: 'Fjalla One', sans-serif;
+    color: #fff;
+    font-size: 22px;
+    padding: 15px 0 15px 9px;
+    position: absolute; }
+/* line 24, ../scss/pages/_resume.scss */
+#resume-page .employment .emp-period:after,
+#resume-page .employment .edu-period:after,
+#resume-page .education .emp-period:after,
+#resume-page .education .edu-period:after {
+    background: url('../images/emp-date-marker5c05.png?1391125702') no-repeat 0 0;
+    content: "";
+    display: block;
+    width: 13px;
+    height: 15px;
+    position: absolute;
+    top: 19px;
+    right: -46px; }
+/* line 37, ../scss/pages/_resume.scss */
+#resume-page .employment .emp-title,
+#resume-page .employment .edu-title,
+#resume-page .education .emp-title,
+#resume-page .education .edu-title {
+    font-size: 22px;
+    font-family: 'PT Sans', sans-serif;
+    color: #fff;
+    line-height: 32px;
+    text-transform: uppercase; }
+/* line 46, ../scss/pages/_resume.scss */
+#resume-page .employment .emp-company,
+#resume-page .employment .edu-univer,
+#resume-page .education .emp-company,
+#resume-page .education .edu-univer {
+    font-size: 22px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    line-height: 34px; }
+/* line 55, ../scss/pages/_resume.scss */
+#resume-page .employment .emp-description,
+#resume-page .employment .edu-description,
+#resume-page .education .emp-description,
+#resume-page .education .edu-description {
+    padding: 15px 0 0 0; }
+/* line 60, ../scss/pages/_resume.scss */
+#resume-page .resume-buttons {
+    padding: 0 0 0px 0;
+    text-align: center; }
+/* line 64, ../scss/pages/_resume.scss */
+#resume-page .resume-buttons a.print-button {
+    background: #db5800;
+    display: inline-block;
+    position: relative;
+    font-family: 'Fjalla One', sans-serif;
+    color: #fff;
+    font-size: 25px;
+    padding: 15px 9px 15px 9px;
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 6px 45px 0;
+    width: 118px; }
+/* line 135, ../scss/base/_mixins.scss */
+#resume-page .resume-buttons a.print-button:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 27px solid transparent;
+    border-bottom: 27px solid transparent;
+    border-right: 19px solid #db5800;
+    position: absolute;
+    top: 0;
+    left: -19px; }
+/* line 147, ../scss/base/_mixins.scss */
+#resume-page .resume-buttons a.print-button:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 27px solid transparent;
+    border-bottom: 27px solid transparent;
+    border-left: 19px solid #db5800;
+    position: absolute;
+    top: 0;
+    right: -19px; }
+/* line 69, ../scss/pages/_resume.scss */
+#resume-page .resume-buttons a.download-button {
+    background: #ff9000;
+    display: inline-block;
+    position: relative;
+    font-family: 'Fjalla One', sans-serif;
+    color: #fff;
+    font-size: 25px;
+    padding: 15px 9px 15px 9px;
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 6px 45px 0;
+    width: 118px; }
+/* line 135, ../scss/base/_mixins.scss */
+#resume-page .resume-buttons a.download-button:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 27px solid transparent;
+    border-bottom: 27px solid transparent;
+    border-right: 19px solid #ff9000;
+    position: absolute;
+    top: 0;
+    left: -19px; }
+/* line 147, ../scss/base/_mixins.scss */
+#resume-page .resume-buttons a.download-button:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 27px solid transparent;
+    border-bottom: 27px solid transparent;
+    border-left: 19px solid #ff9000;
+    position: absolute;
+    top: 0;
+    right: -19px; }
+/* line 77, ../scss/pages/_resume.scss */
+#resume-page .layout-switcher {
+    padding: 50px 0;
+    width: 790px;
+    text-align: center; }
+/* line 82, ../scss/pages/_resume.scss */
+#resume-page .layout-switcher span {
+    display: inline-block;
+    color: #888888;
+    font-size: 30px;
+    line-height: 45px;
+    padding: 0 22px;
+    vertical-align: top;
+    -webkit-transition: color 0.3s ease-in;
+    -webkit-transition-delay: 0s;
+    -moz-transition: color 0.3s ease-in 0s;
+    -o-transition: color 0.3s ease-in 0s;
+    transition: color 0.3s ease-in 0s; }
+/* line 91, ../scss/pages/_resume.scss */
+#resume-page .layout-switcher span.active {
+    color: #fff; }
+/* line 97, ../scss/pages/_resume.scss */
+#resume-page .onoffswitch {
+    position: relative;
+    overflow: hidden;
+    width: 76px;
+    margin: 0 auto;
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none; }
+/* line 105, ../scss/pages/_resume.scss */
+#resume-page .onoffswitch-checkbox {
+    display: none; }
+/* line 108, ../scss/pages/_resume.scss */
+#resume-page .onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 23px; }
+/* line 114, ../scss/pages/_resume.scss */
+#resume-page .onoffswitch-inner {
+    width: 200%;
+    margin-left: -100%;
+    -webkit-transition: margin 0.3s ease-in;
+    -webkit-transition-delay: 0s;
+    -moz-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s;
+    transition: margin 0.3s ease-in 0s; }
+/* line 119, ../scss/pages/_resume.scss */
+#resume-page .onoffswitch-inner:before, #resume-page .onoffswitch-inner:after {
+    float: left;
+    width: 50%;
+    height: 42px;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+/* line 127, ../scss/pages/_resume.scss */
+#resume-page .onoffswitch-inner:before {
+    content: "";
+    padding-left: 10px;
+    background-color: #F0C600; }
+/* line 133, ../scss/pages/_resume.scss */
+#resume-page .onoffswitch-inner:after {
+    content: "";
+    padding-right: 10px;
+    background-color: #F0C600; }
+/* line 139, ../scss/pages/_resume.scss */
+#resume-page .onoffswitch-switch {
+    width: 39px;
+    margin: 2px 3px 2px 0;
+    background: #eeeeee;
+    border-radius: 23px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 31px;
+    -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.3s ease-in;
+    -webkit-transition-delay: 0s;
+    -moz-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s;
+    transition: all 0.3s ease-in 0s; }
+/* line 151, ../scss/pages/_resume.scss */
+#resume-page .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0; }
+/* line 154, ../scss/pages/_resume.scss */
+#resume-page .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; }
+
+/* line 164, ../scss/pages/_resume.scss */
+#resume-timeline .employment .emp-period,
+#resume-timeline .employment .edu-period,
+#resume-timeline .education .emp-period,
+#resume-timeline .education .edu-period {
+    display: inline-block;
+    width: 118px;
+    height: 54px;
+    background-color: #049bc7;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 6px 0 0 -192px; }
+/* line 98, ../scss/base/_mixins.scss */
+#resume-timeline .employment .emp-period:before,
+#resume-timeline .employment .edu-period:before,
+#resume-timeline .education .emp-period:before,
+#resume-timeline .education .edu-period:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    border-top: 27px solid transparent;
+    border-bottom: 27px solid transparent; }
+/* line 117, ../scss/base/_mixins.scss */
+#resume-timeline .employment .emp-period:before,
+#resume-timeline .employment .edu-period:before,
+#resume-timeline .education .emp-period:before,
+#resume-timeline .education .edu-period:before {
+    border-left: 19px solid #049bc7;
+    right: -19px; }
+/* line 168, ../scss/pages/_resume.scss */
+#resume-timeline .employment .emp-period:after,
+#resume-timeline .employment .edu-period:after,
+#resume-timeline .education .emp-period:after,
+#resume-timeline .education .edu-period:after {
+    background: url('../images/emp-date-marker5c05.png?1391125702') no-repeat 0 0;
+    content: "";
+    display: block;
+    width: 13px;
+    height: 15px;
+    position: absolute;
+    top: 19px;
+    right: -46px; }
+/* line 180, ../scss/pages/_resume.scss */
+#resume-timeline .employment .edu-period,
+#resume-timeline .education .edu-period {
+    display: inline-block;
+    width: 118px;
+    height: 54px;
+    background-color: #09bf7d;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+/* line 98, ../scss/base/_mixins.scss */
+#resume-timeline .employment .edu-period:before,
+#resume-timeline .education .edu-period:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    border-top: 27px solid transparent;
+    border-bottom: 27px solid transparent; }
+/* line 117, ../scss/base/_mixins.scss */
+#resume-timeline .employment .edu-period:before,
+#resume-timeline .education .edu-period:before {
+    border-left: 19px solid #09bf7d;
+    right: -19px; }
+
+/* line 186, ../scss/pages/_resume.scss */
+#resume-basicview {
+    position: relative; }
+/* line 190, ../scss/pages/_resume.scss */
+#resume-basicview .employment,
+#resume-basicview .education {
+    background: #2b2b2b;
+    border-bottom: 3px solid #464646;
+    padding: 20px 20px 5px;
+    margin: 0 125px 25px 0; }
+/* line 197, ../scss/pages/_resume.scss */
+#resume-basicview .employment .emp-period,
+#resume-basicview .employment .edu-period,
+#resume-basicview .education .emp-period,
+#resume-basicview .education .edu-period {
+    display: inline-block;
+    width: 118px;
+    height: 54px;
+    background-color: #049bc7;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    right: -32px;
+    padding: 15px 9px 15px 0; }
+/* line 98, ../scss/base/_mixins.scss */
+#resume-basicview .employment .emp-period:before,
+#resume-basicview .employment .edu-period:before,
+#resume-basicview .education .emp-period:before,
+#resume-basicview .education .edu-period:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    border-top: 27px solid transparent;
+    border-bottom: 27px solid transparent; }
+/* line 110, ../scss/base/_mixins.scss */
+#resume-basicview .employment .emp-period:before,
+#resume-basicview .employment .edu-period:before,
+#resume-basicview .education .emp-period:before,
+#resume-basicview .education .edu-period:before {
+    border-right: 19px solid #049bc7;
+    left: -19px; }
+/* line 202, ../scss/pages/_resume.scss */
+#resume-basicview .employment .emp-period:after,
+#resume-basicview .employment .edu-period:after,
+#resume-basicview .education .emp-period:after,
+#resume-basicview .education .edu-period:after {
+    display: none; }
+/* line 207, ../scss/pages/_resume.scss */
+#resume-basicview .employment .edu-period,
+#resume-basicview .education .edu-period {
+    display: inline-block;
+    width: 118px;
+    height: 54px;
+    background-color: #09bf7d;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+/* line 98, ../scss/base/_mixins.scss */
+#resume-basicview .employment .edu-period:before,
+#resume-basicview .education .edu-period:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    border-top: 27px solid transparent;
+    border-bottom: 27px solid transparent; }
+/* line 110, ../scss/base/_mixins.scss */
+#resume-basicview .employment .edu-period:before,
+#resume-basicview .education .edu-period:before {
+    border-right: 19px solid #09bf7d;
+    left: -19px; }
+
+/*Google fonts*/
